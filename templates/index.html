@@ -1,0 +1,45 @@
+{{define "Index"}}
+{{template "_head"}}
+{{template "_menu"}}
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- table tittle-->
+                <h2>Product List</h2>
+                <table class="table table-striped">
+                    <thead> 
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .}}
+                        <tr>
+                            <td>{{.Name}}</td>
+                            <td>{{.Description}}</td>
+                            <td>{{.Price}}</td>
+                            <td>{{.Quantity}}</td>
+                            <td><a href="/edit?id={{.Id}}" class="btn btn-info">Update</a></td>
+                            <td><a href="/delete?id={{.Id}}" class="btn btn-danger">Delete</a></td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="container-footer">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="/new" class="btn btn-primary">Insert</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+{{end}}

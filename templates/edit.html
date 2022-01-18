@@ -1,0 +1,56 @@
+{{define "Edit"}}
+{{template "_head"}}
+{{template "_menu"}}
+<div class="container">
+
+    <body>
+            <div class="container">
+                <h1 class="display-5">Update Product</h1>
+                <p class="lead">Insert the new data</p>
+            </div>
+        <form method="POST" action="update">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" value="{{.Name}}" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <input type="text" name="description" value="{{.Description}}" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="price">Price:</label>
+                        <input type="number" name="price" value="{{.Price}}" class="form-control" step="0.01">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" name="quantity" value="{{.Quantity}}" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="id" value="{{.Id}}">
+            <button type="submit" value="update" class="btn btn-success">Update</button>
+            <a class="btn btn-info" href="/">Back</a>
+        </form>
+    </body>
+
+</html>
+</div>
+</body>
+
+</html>
+{{end}}
