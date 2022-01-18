@@ -4,7 +4,7 @@
 This is a simple web application made with Golang's standard library
 
 
-## Autores
+## Authors
 
 - [@RaphaSalomao](https://www.github.com/RaphaSalomao)
 
